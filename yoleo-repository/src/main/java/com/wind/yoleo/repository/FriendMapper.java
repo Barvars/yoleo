@@ -1,20 +1,9 @@
 package com.wind.yoleo.repository;
 
-import org.springframework.stereotype.Repository;
-
 import com.wind.yoleo.common.model.Friend;
+import org.springframework.stereotype.Repository;
+import tk.mybatis.mapper.common.Mapper;
 
 @Repository
-public interface FriendMapper {
-	int deleteByPrimaryKey(Long id);
-
-	int insert(Friend record);
-
-	int insertSelective(Friend record);
-
-	Friend selectByPrimaryKey(Long id);
-
-	int updateByPrimaryKeySelective(Friend record);
-
-	int updateByPrimaryKey(Friend record);
+public interface FriendMapper extends Mapper<Friend> {
 }

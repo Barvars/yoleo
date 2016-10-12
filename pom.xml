@@ -9,11 +9,22 @@
   <name>yoleo</name>
   <url>http://maven.apache.org</url>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <source.version>1.7</source.version>
         <target.version>1.7</target.version>
+
+        <!--  MyBatis Generator  -->
+        <!--  Java接口和实体类  -->
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <targetMapperPackage>tk.mybatis.mapper.mapper</targetMapperPackage>
+        <targetModelPackage>tk.mybatis.mapper.model</targetModelPackage>
+        <!--  XML生成路径  -->
+        <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
+        <targetXMLPackage>mapper</targetXMLPackage>
+        <!--  依赖版本  -->
+        <mapper.version>3.3.9</mapper.version>
+        <mysql.version>5.1.29</mysql.version>
     </properties>
 
   <modules>
