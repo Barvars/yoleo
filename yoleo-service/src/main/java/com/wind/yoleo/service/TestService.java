@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.wind.yoleo.common.model.User;
 import com.wind.yoleo.repository.UserMapper;
 
+import java.util.List;
+
 @Service
 public class TestService {
 
@@ -14,6 +16,10 @@ public class TestService {
 
 	public User hello() {
 		return userMapper.selectByPrimaryKey(1L);
+	}
+
+	public List<User> selectAll(){
+		return userMapper.selectAll();
 	}
 
 }

@@ -182,5 +182,14 @@
 			<version>1.16.10</version>
 		</dependency>
 
+
+		<!--mybatis mapper-->
+		<!--document:https://github.com/abel533/Mapper-->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper</artifactId>
+			<version>3.3.9</version>
+		</dependency>
+
 	</dependencies>
 </project>

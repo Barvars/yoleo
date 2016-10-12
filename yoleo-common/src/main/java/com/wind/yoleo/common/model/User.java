@@ -1,6 +1,13 @@
 package com.wind.yoleo.common.model;
 
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name = "user")
 public class User {
+    @Id
+//    @GeneratedValue(generator = "JDBC")
     private Long id;
 
     private String nick;

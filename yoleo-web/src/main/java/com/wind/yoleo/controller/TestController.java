@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.alibaba.fastjson.JSON;
 import com.wind.yoleo.common.model.User;
 import com.wind.yoleo.service.TestService;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/test")
@@ -30,5 +33,12 @@ public class TestController {
         User user = testService.hello();
         LOGGER.info("user:{}", user);
         return new ResponseEntity<String>(JSON.toJSONString(user), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/userList", method = RequestMethod.GET)
+    @ResponseBody
+    public String userList(){
+        LOGGER.debug("userList begin>>>>>>");
+        return JSON.toJSONString(testService.selectAll());
     }
 }
