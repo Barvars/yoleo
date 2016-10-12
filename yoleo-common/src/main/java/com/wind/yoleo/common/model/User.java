@@ -60,4 +60,16 @@ public class User {
     public void setCreateTime(Integer createTime) {
         this.createTime = createTime;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", nick='" + nick + '\'' +
+                ", sex=" + sex +
+                ", phone='" + phone + '\'' +
+                ", location='" + location + '\'' +
+                ", createTime=" + createTime +
+                '}';
+    }
 }
